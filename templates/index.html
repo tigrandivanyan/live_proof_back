@@ -1,0 +1,36 @@
+<html>
+<head>
+    
+</head>
+<body>
+    {{ date }}<br>
+    {{ time }}<br>
+    {{ weather }}<br>
+    {{ changerate }}
+
+    <script>
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('GET', 'http://192.168.2.58/getdata', true);
+
+        xhr.send();
+
+        xhr.onreadystatechange = function() {
+        if (this.readyState != 4) return;
+
+        // по окончании запроса доступны:
+        // status, statusText
+        // responseText, responseXML (при content-type: text/xml)
+
+        if (this.status != 200) {
+            // обработать ошибку
+            alert( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
+            return;
+        }
+
+        // получить результат из this.responseText или this.responseXML
+        }          
+    </script>
+
+</body>
+</html>

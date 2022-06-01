@@ -25,14 +25,14 @@ def index(request):
                             "weather":get_weather('1526273'),
                             "time":get_time(+6),
                             "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"moscow.jpg"
+                            "backgroundImageName":"nursultan.jpg"
                         },
                         {
                             "name":"Уральск",
                             "weather":get_weather('608668'),
                             "time":get_time(+5),
                             "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"london.jpg"
+                            "backgroundImageName":"Uralsk.jpg"
                         },
                         {
                             "name":"Москва",

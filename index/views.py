@@ -21,25 +21,25 @@ def index(request):
     jsonFront = {
                     "cities":[
                         {
+                            "name":"Нур-Султан",
+                            "weather":get_weather('1526273'),
+                            "time":get_time(+6),
+                            "additional":"data streamed from openweathermap.org",
+                            "backgroundImageName":"currency.jpg"
+                        },
+                        {
+                            "name":"Уральск",
+                            "weather":get_weather('608668'),
+                            "time":get_time(+5),
+                            "additional":"data streamed from openweathermap.org",
+                            "backgroundImageName":"currency.jpg"
+                        },
+                        {
                             "name":"Москва",
                             "weather":get_weather('524901'),
                             "time":get_time(+3),
                             "additional":"data streamed from openweathermap.org",
                             "backgroundImageName":"moscow.jpg"
-                        },
-                        {
-                            "name":"Нью-Йорк",
-                            "weather":get_weather('5128581'),
-                            "time":get_time(-5),
-                            "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"newYork.jpg"
-                        },
-                        {
-                            "name":"Лондон",
-                            "weather":get_weather('2643743'),
-                            "time":get_time(0),
-                            "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"london.jpg"
                         },
                     ],
                     "currencies":{
@@ -50,8 +50,8 @@ def index(request):
                             "value":get_changerate('USD')
                         },
                         "currency2":{
-                            "name":"EUR",
-                            "value":get_changerate('EUR')
+                            "name":"KZT",
+                            "value":get_changerate('KZT')
                         },
                         "additional":"data streamed from www.cbr.ru"
                     }

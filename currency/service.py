@@ -37,3 +37,33 @@ def get_datafromweb(time_zone):
         return data
     else:
         return 0
+
+def get_changerateKZ(currency):
+    global xmlData
+    global lastQuery
+
+    timedelta = time.time() - lastQuery
+    if timedelta > 3600:
+        lastQuery = time.time()
+        response = get_datafromwebKZ(3)
+        if response != 0:
+            xmlData = get_datafromwebKZ(+3)
+        
+    data = xmlData.find(f'*[title="{currency}"]')
+    strvalue = data.find('description').text
+    value = float(strvalue.replace(',', '.'))
+    return str(round(value, 1))
+
+def get_datafromwebKZ(time_zone):
+    utc_time = dt.datetime.utcnow()
+    offset = dt.timedelta(hours=time_zone)
+    date = (utc_time + offset).strftime('%d/%m/%Y')
+
+    url = f'https://nationalbank.kz/rss/get_rates.cfm?fdate={date}'
+    response = requests.get(url)
+    if response.status_code == 200:
+        print(f"Changerates refresh from {url}")
+        data = ET.fromstring(response.text)
+        return data
+    else:
+        return 0

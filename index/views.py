@@ -47,11 +47,11 @@ def index(request):
                         "backgroundImageName":"currency.jpg",
                         "currency1":{
                             "name":"USD",
-                            "value":get_changerateKZ('USD')
+                            "value":get_changerateKZ('USD/KZT')
                         },
                         "currency2":{
                             "name":"RUB",
-                            "value":get_changerateKZ('RUB')
+                            "value":get_changerateKZ('RUB/KZT')
                         },
                         "additional":"data streamed from www.nationalbank.kz"
                     }

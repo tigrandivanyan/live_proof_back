@@ -32,7 +32,7 @@ def index(request):
                             "weather":get_weather('608668'),
                             "time":get_time(+5),
                             "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"uralsk.jpg"
+                            "backgroundImageName":"Uralsk.jpg"
                         },
                         {
                             "name":"Москва",

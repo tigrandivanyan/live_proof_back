@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from weather.service import get_weather
 from gtime.service import get_time, get_date
-from currency.service import get_changerate
+from currency.service import get_changerate, get_changerateKZ
 import json
 #msk-524901
 #london-2643743
@@ -32,7 +32,7 @@ def index(request):
                             "weather":get_weather('608668'),
                             "time":get_time(+5),
                             "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"Uralsk.jpg"
+                            "backgroundImageName":"uralsk.jpg"
                         },
                         {
                             "name":"Москва",
@@ -47,13 +47,13 @@ def index(request):
                         "backgroundImageName":"currency.jpg",
                         "currency1":{
                             "name":"USD",
-                            "value":get_changerate('USD')
+                            "value":get_changerateKZ('USD')
                         },
                         "currency2":{
-                            "name":"KZT",
-                            "value":get_changerate('KZT')
+                            "name":"RUB",
+                            "value":get_changerateKZ('RUB')
                         },
-                        "additional":"data streamed from www.cbr.ru"
+                        "additional":"data streamed from www.nationalbank.kz"
                     }
             
                 }

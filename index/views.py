@@ -43,7 +43,7 @@ def index(request):
                         },
                         {
                             "name":"Алматы",
-                            "weather":get_weather('1526395'),
+                            "weather":get_weather('1526384'),
                             "time":get_time(+6),
                             "additional":"data streamed from openweathermap.org",
                             "backgroundImageName":"almaty.jpg"

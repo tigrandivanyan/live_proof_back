@@ -41,6 +41,20 @@ def index(request):
                             "additional":"data streamed from openweathermap.org",
                             "backgroundImageName":"moscow.jpg"
                         },
+                        {
+                            "name":"Алматы",
+                            "weather":get_weather('1526395'),
+                            "time":get_time(+6),
+                            "additional":"data streamed from openweathermap.org",
+                            "backgroundImageName":"almaty.jpg"
+                        },
+                        {
+                            "name":"Шымкент",
+                            "weather":get_weather('1518980'),
+                            "time":get_time(+6),
+                            "additional":"data streamed from openweathermap.org",
+                            "backgroundImageName":"shymkent.jpg"
+                        },
                     ],
                     "currencies":{
                         "date":get_date(+3),

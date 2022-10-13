@@ -21,20 +21,6 @@ def index(request):
     jsonFront = {
                     "cities":[
                         {
-                            "name":"Нур-Султан",
-                            "weather":get_weather('1526273'),
-                            "time":get_time(+6),
-                            "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"nursultan.jpg"
-                        },
-                        {
-                            "name":"Уральск",
-                            "weather":get_weather('608668'),
-                            "time":get_time(+5),
-                            "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"Uralsk.jpg"
-                        },
-                        {
                             "name":"Москва",
                             "weather":get_weather('524901'),
                             "time":get_time(+3),
@@ -42,32 +28,32 @@ def index(request):
                             "backgroundImageName":"moscow.jpg"
                         },
                         {
-                            "name":"Алматы",
-                            "weather":get_weather('1526384'),
-                            "time":get_time(+6),
+                            "name":"Нью-Йорк",
+                            "weather":get_weather('5128581'),
+                            "time":get_time(-5),
                             "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"almaty.jpg"
+                            "backgroundImageName":"newYork.jpg"
                         },
                         {
-                            "name":"Шымкент",
-                            "weather":get_weather('1518980'),
-                            "time":get_time(+6),
+                            "name":"Лондон",
+                            "weather":get_weather('2643743'),
+                            "time":get_time(0),
                             "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"shymkent.jpg"
+                            "backgroundImageName":"london.jpg"
                         },
                     ],
                     "currencies":{
                         "date":get_date(+3),
                         "backgroundImageName":"currency.jpg",
                         "currency1":{
-                            "name":"USD/KZT",
-                            "value":get_changerateKZ('USD')
+                            "name":"USD",
+                            "value":get_changerate('USD')
                         },
                         "currency2":{
-                            "name":"RUB/KZT",
-                            "value":get_changerateKZ('RUB')
+                            "name":"EUR",
+                            "value":get_changerate('EUR')
                         },
-                        "additional":"data streamed from www.nationalbank.kz"
+                        "additional":"data streamed from www.cbr.ru"
                     }
             
                 }

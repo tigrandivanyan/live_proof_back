@@ -21,39 +21,39 @@ def index(request):
     jsonFront = {
                     "cities":[
                         {
+                            "name":"Астана",
+                            "weather":get_weather('1526273'),
+                            "time":get_time(+6),
+                            "additional":"data streamed from openweathermap.org",
+                            "backgroundImageName":"nursultan.jpg"
+                        },
+                        {
+                            "name":"Уральск",
+                            "weather":get_weather('608668'),
+                            "time":get_time(+5),
+                            "additional":"data streamed from openweathermap.org",
+                            "backgroundImageName":"Uralsk.jpg"
+                        },
+                        {
                             "name":"Москва",
                             "weather":get_weather('524901'),
                             "time":get_time(+3),
                             "additional":"data streamed from openweathermap.org",
                             "backgroundImageName":"moscow.jpg"
                         },
-                        {
-                            "name":"Нью-Йорк",
-                            "weather":get_weather('5128581'),
-                            "time":get_time(-5),
-                            "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"newYork.jpg"
-                        },
-                        {
-                            "name":"Лондон",
-                            "weather":get_weather('2643743'),
-                            "time":get_time(0),
-                            "additional":"data streamed from openweathermap.org",
-                            "backgroundImageName":"london.jpg"
-                        },
                     ],
                     "currencies":{
                         "date":get_date(+3),
                         "backgroundImageName":"currency.jpg",
                         "currency1":{
-                            "name":"USD",
-                            "value":get_changerate('USD')
+                            "name":"USD/KZT",
+                            "value":get_changerateKZ('USD')
                         },
                         "currency2":{
-                            "name":"EUR",
-                            "value":get_changerate('EUR')
+                            "name":"RUB/KZT",
+                            "value":get_changerateKZ('RUB')
                         },
-                        "additional":"data streamed from www.cbr.ru"
+                        "additional":"data streamed from www.nationalbank.kz"
                     }
             
                 }
